@@ -6,7 +6,7 @@ const Projects = () => {
     <div>
       {data.map((item, index) => {
         console.log(item);
-        const { image, title, description, live, source } = item;
+        const { image, title, description, live, source, tech } = item;
         return (
           <article key={index}>
             <img src={image} alt="" width={'250px'} />
@@ -21,6 +21,12 @@ const Projects = () => {
                   );
                 })}
               </div>
+              <p>
+                Built with:
+                {tech.map((item, index) => (
+                  <span key={index}> {item}</span>
+                ))}
+              </p>
               <div>
                 <button>
                   <a href={live}>live app</a>
