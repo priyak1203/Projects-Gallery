@@ -24,7 +24,9 @@ const Projects = () => {
               <p>
                 Built with:
                 {tech.map((item, index) => (
-                  <span key={index}> {item}</span>
+                  <span key={index}>
+                    {index < tech.length - 1 ? ` ${item}, ` : ` ${item}`}
+                  </span>
                 ))}
               </p>
               <div>
