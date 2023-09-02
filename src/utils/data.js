@@ -22,7 +22,7 @@ export const projectsData = [
     tech: [
       'Context-API',
       'Auth0',
-      ' Stripe',
+      'Stripe',
       'React Router',
       'Axios',
       'Styled Components',

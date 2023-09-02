@@ -1,9 +1,10 @@
 import Projects from './Projects';
+import Topbar from './Topbar';
 
 function App() {
   return (
     <>
-      <h1>Projects Gallery</h1>
+      <Topbar />
       <Projects />
     </>
   );
