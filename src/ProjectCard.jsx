@@ -2,14 +2,21 @@ import { BiChevronsRight } from 'react-icons/bi';
 
 const ProjectCard = ({ image, title, description, live, source, tech }) => {
   return (
-    <article className="bg-white shadow-lg hover:shadow-xl p-4 flex gap-x-8">
-      <img src={image} alt="" width={'250px'} />
-      <div>
-        <h3>{title}</h3>
+    <article className="bg-white shadow-lg hover:shadow-xl rounded-lg p-2 w-full flex flex-col gap-2 lg:flex-row lg:gap-8">
+      <img
+        src={image}
+        alt={title}
+        className="border border-green-400 block w-full lg:w-4/12 rounded"
+      />
+      <div className="w-full border border-black">
+        <h3 className="text-lg">{title}</h3>
         <div>
           {description.map((item, index) => {
             return (
-              <span className="flex items-center gap-2" key={index}>
+              <span
+                className="flex items-center gap-2 text-slate-600"
+                key={index}
+              >
                 <BiChevronsRight /> {item}
               </span>
             );
