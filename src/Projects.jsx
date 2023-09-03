@@ -1,10 +1,20 @@
 import ProjectCard from './ProjectCard';
-import { projectsData as data } from './utils/data';
+import { useFetchProjects } from './fetchProjects';
 
 const Projects = () => {
+  const { isLoading, projects } = useFetchProjects();
+
+  if (isLoading) {
+    return (
+      <section>
+        <h3>Loading...</h3>
+      </section>
+    );
+  }
+
   return (
     <section className="p-4 grid gap-8 content-normal justify-content-center lg:px-10 lg:py-5 ">
-      {data.map((item, index) => {
+      {projects.map((item, index) => {
         return <ProjectCard key={index} {...item} />;
       })}
     </section>
