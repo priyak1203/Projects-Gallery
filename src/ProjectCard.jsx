@@ -30,7 +30,7 @@ const ProjectCard = ({ image, title, description, live, source, tech }) => {
             </span>
           ))}
         </p>
-        <div className="px-2 mt-4 flex gap-4 font-semibold text-purple-500 ">
+        <div className="px-2 mt-4 flex gap-4 font-semibold text-cornflower-500 ">
           <button className="btn">
             <a
               href={live}

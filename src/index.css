@@ -4,7 +4,7 @@
 
 @layer components {
   .btn {
-    @apply capitalize hover:bg-purple-400 hover:text-white hover:rounded hover:px-2;
+    @apply capitalize hover:bg-cornflower-600 hover:text-white hover:rounded hover:px-2;
   }
   .link {
     @apply flex items-center font-semibold tracking-wide leading-relaxed;
