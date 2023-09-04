@@ -6,14 +6,14 @@ const Projects = () => {
 
   if (isLoading) {
     return (
-      <section>
-        <h3>Loading...</h3>
+      <section className="p-8 grid justify-center">
+        <div className="border-4 border-slate-400 w-24 h-24 rounded-full border-t-purple-500 animate-spin"></div>
       </section>
     );
   }
 
   return (
-    <section className="p-4 grid gap-8 content-normal justify-content-center lg:px-10 lg:py-5 ">
+    <section className="p-4 grid gap-8 justify-center lg:px-10 lg:py-5 ">
       {projects.map((item, index) => {
         return <ProjectCard key={index} {...item} />;
       })}
