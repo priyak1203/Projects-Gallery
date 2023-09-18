@@ -26,7 +26,7 @@ export const useFetchProjects = () => {
       setProjects(projects);
       setIsLoading(false);
     } catch (error) {
-      cpnsole.log(error);
+      console.log(error);
       setIsLoading(false);
     }
   };

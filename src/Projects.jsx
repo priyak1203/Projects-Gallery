@@ -13,7 +13,7 @@ const Projects = () => {
   }
 
   return (
-    <section className="p-4 grid gap-8 justify-center lg:px-10 lg:py-5">
+    <section className="p-4 grid gap-8 justify-center lg:px-24 lg:py-6">
       {projects.map((item, index) => {
         return <ProjectCard key={index} {...item} />;
       })}
