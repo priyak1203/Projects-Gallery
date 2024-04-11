@@ -1,8 +1,12 @@
-import ProjectCard from './ProjectCard';
+import ProjectCard from './ProjectListCard';
+import ProjectsGrid from './ProjectsGrid';
+import ProjectsList from './ProjectsList';
+import { useGlobalContext } from './context';
 import { useFetchProjects } from './fetchProjects';
 
 const Projects = () => {
   const { isLoading, projects } = useFetchProjects();
+  const { listView } = useGlobalContext();
 
   if (isLoading) {
     return (
@@ -12,13 +16,11 @@ const Projects = () => {
     );
   }
 
-  return (
-    <section className="p-4 grid gap-8 justify-center lg:px-24 lg:py-8">
-      {projects.map((item, index) => {
-        return <ProjectCard key={index} {...item} />;
-      })}
-    </section>
-  );
+  if (listView) {
+    return <ProjectsList projects={projects} />;
+  }
+
+  return <ProjectsGrid projects={projects} />;
 };
 
 export default Projects;

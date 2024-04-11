@@ -1,7 +1,7 @@
 import { BiChevronsRight } from 'react-icons/bi';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 
-const ProjectCard = ({ image, title, description, live, source, tech }) => {
+const ProjectListCard = ({ image, title, description, live, source, tech }) => {
   return (
     <article className="bg-white shadow-lg hover:shadow-xl rounded-lg p-2 w-full flex flex-col gap-2 lg:flex-row lg:gap-8">
       <img src={image} alt={title} className="block w-full lg:w-4/12 rounded" />
@@ -59,4 +59,4 @@ const ProjectCard = ({ image, title, description, live, source, tech }) => {
   );
 };
 
-export default ProjectCard;
+export default ProjectListCard;
