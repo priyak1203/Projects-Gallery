@@ -1,3 +1,4 @@
+import InfoModal from './InfoModal';
 import ProjectGridCard from './ProjectGridCard';
 
 const ProjectsGrid = ({ projects }) => {
@@ -6,6 +7,7 @@ const ProjectsGrid = ({ projects }) => {
       {projects.map((item, index) => {
         return <ProjectGridCard key={index} {...item} />;
       })}
+      <InfoModal />
     </section>
   );
 };

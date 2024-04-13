@@ -15,4 +15,17 @@
   .topbar-icon {
     @apply text-xl text-white;
   }
+
+  .modal-overlay {
+    @apply fixed top-0 left-0 w-full h-full bg-slate-400 bg-opacity-50  grid place-items-center invisible z-0 opacity-0;
+  }
+  .show-modal {
+    @apply opacity-100 visible z-10;
+  }
+  .modal-container {
+    @apply bg-white w-[90vw] h-[60vh] grid rounded max-w-[700px] px-4 py-2 relative;
+  }
+  .close-modal-btn {
+    @apply absolute top-2 right-2 text-2xl bg-transparent border-transparent cursor-pointer text-red-800;
+  }
 }

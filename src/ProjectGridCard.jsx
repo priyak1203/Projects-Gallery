@@ -1,7 +1,10 @@
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import { BsFillInfoCircleFill } from 'react-icons/bs';
+import { useGlobalContext } from './context';
 
-const ProjectGridCard = ({ image, title, description, live, source, tech }) => {
+const ProjectGridCard = ({ id, image, title, live, source }) => {
+  const { openModal } = useGlobalContext();
+
   return (
     <article className="w-11/12 bg-white p-3 shadow-lg hover:shadow-2xl  rounded-lg ">
       <img src={image} alt={title} className="w-full h-40" />
@@ -34,7 +37,7 @@ const ProjectGridCard = ({ image, title, description, live, source, tech }) => {
               </a>
             </button>
           </div>
-          <button className="btn ">
+          <button className="btn" onClick={() => openModal(id)}>
             <span className="link">
               <BsFillInfoCircleFill className="icon" />
               info
