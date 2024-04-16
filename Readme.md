@@ -21,3 +21,17 @@ A Page for displaying the projects and their information.
 - Tailwind CSS
 - Contentful CMS
 - React Icons
+
+### Images
+
+#### Grid View
+
+![Grid View](./images/GridView.jpg)
+
+#### Grid View Modal
+
+![Grid View Modal](./images/GridViewModal.jpg)
+
+#### List View
+
+![List View](./images/ListView.jpg)
