@@ -4,7 +4,7 @@ import { useFetchProjects } from './fetchProjects';
 const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
-  const [listView, setListView] = useState(false);
+  const [listView, setListView] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalData, setModalData] = useState({});
 
